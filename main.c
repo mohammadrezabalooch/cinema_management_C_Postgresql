@@ -32,6 +32,8 @@ int main() {
     // فراخوانی تابع برای ایجاد جدول movies فقط یک بار اجرا کافیست
     //create_movies_table(conn);
 
+    create_tables(conn);
+
     PQclear(res);
     PQfinish(conn);
     

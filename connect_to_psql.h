@@ -5,5 +5,6 @@
 
 // تابعی که به دیتابیس Postgres داخل Docker Compose وصل می‌شود
 PGconn* connect_to_db();
+void execute_sql(PGconn *conn, const char *sql);
 
 #endif

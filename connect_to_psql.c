@@ -20,3 +20,24 @@ PGconn* connect_to_db() {
     printf("✅ Connected to PostgreSQL successfully.\n");
     return conn;
 }
+
+
+
+
+
+
+
+
+void execute_sql(PGconn *conn, const char *sql) {
+    PGresult *res = PQexec(conn, sql);
+
+    if (PQresultStatus(res) != PGRES_COMMAND_OK) {
+        fprintf(stderr, "SQL Error: %s\n", PQerrorMessage(conn));
+        PQclear(res);
+        exit(1);
+    }
+
+    printf("✅ Tables created successfully.\n");
+
+    PQclear(res);
+}
