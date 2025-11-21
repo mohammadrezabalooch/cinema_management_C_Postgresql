@@ -36,9 +36,10 @@ int main() {
     create_tables(conn);
     
     PQclear(res);
-    PQfinish(conn);
     
-    mainMenu();
+    mainMenu(conn);
+    
+    PQfinish(conn);
 
     //منو قدیمی
     //list_of_items();
