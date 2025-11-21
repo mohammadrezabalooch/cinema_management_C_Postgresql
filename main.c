@@ -2,6 +2,7 @@
 #include "show_list.h"
 #include "connect_to_psql.h"
 #include "queries.h"
+#include "create_tables.h"
 #include "menus.h"
 
 int main() {
@@ -33,7 +34,7 @@ int main() {
     //create_movies_table(conn);
 
     create_tables(conn);
-
+    
     PQclear(res);
     PQfinish(conn);
     
