@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "show_list.h"
 #include "connect_to_psql.h"
 #include "queries.h"
 #include "create_tables.h"
